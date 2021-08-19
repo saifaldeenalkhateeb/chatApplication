@@ -1,0 +1,23 @@
+.split-pane {
+    -fx-background-color: linear-gradient(#333 0%, #5687b7 25%, #3e688a 75%, #30548c 100%);
+    -fx-border-color: linear-gradient(#333333 0%, #3f471e 25%, #4c724a 75%, #2d755a 100%);
+
+}
+
+.button {
+    -fx-background-color: #c3c4c4,
+    linear-gradient(#d6d6d6 50%, white 100%),
+    radial-gradient(center 50% -40%, radius 200%, #e6e6e6 45%, rgba(230, 230, 230, 0) 50%);
+    -fx-background-radius: 30;
+    -fx-background-insets: 0, 1, 1;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.6), 3, 0.0, 0, 1);
+}
+
+.button:hover {
+    -fx-background-color: -fx-shadow-highlight-color, -fx-outer-border, -fx-inner-border, -fx-body-color;
+    -fx-background-insets: 0 0 -1 0, 0, 1, 2;
+    -fx-background-radius: 3px, 3px, 2px, 1px;
+    -fx-padding: 0.333333em 0.666667em 0.333333em 0.666667em; /* 4 8 4 8 */
+    -fx-alignment: CENTER;
+    -fx-content-display: LEFT;
+}

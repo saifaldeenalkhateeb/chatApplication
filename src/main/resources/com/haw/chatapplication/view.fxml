@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<SplitPane fx:id="splitPane" dividerPositions="0.3617021276595745" maxHeight="-Infinity" maxWidth="-Infinity"
+           minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="554.0"
+           stylesheets="@./assets/splitPane.css" xmlns="http://javafx.com/javafx/11.0.1"
+           xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.haw.chatapplication.ChatController">
+    <AnchorPane fx:id="links" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+                prefHeight="598.0" prefWidth="195.0">
+        <ListView fx:id="participants" layoutX="8.0" layoutY="312.0" prefHeight="279.0" prefWidth="180.0"
+                  style="-fx-background-color: transparent;" stylesheets="@./assets/listview.css"
+                  AnchorPane.bottomAnchor="7.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="7.0"
+                  AnchorPane.topAnchor="312.0"/>
+        <Button fx:id="peer_connect" layoutX="62.0" layoutY="250.0" mnemonicParsing="false" prefHeight="25.0"
+                prefWidth="71.0" text="connect" textFill="#169727" AnchorPane.bottomAnchor="323.0"
+                AnchorPane.leftAnchor="62.0" AnchorPane.rightAnchor="62.0" AnchorPane.topAnchor="250.0">
+            <font>
+                <Font name="System Bold" size="12.0"/>
+            </font>
+        </Button>
+        <Label fx:id="peer_port_label" layoutX="18.0" layoutY="208.0" style="-fx-font-size: 10pt;"
+               stylesheets="@./assets/label.css" text="Port:" textFill="WHITE" underline="true"/>
+        <TextField fx:id="peer_host" layoutX="53.0" layoutY="167.0" prefHeight="25.0" prefWidth="125.0"
+                   promptText="peer ip" style="-fx-background-radius: 30;" stylesheets="@./assets/testField.css"/>
+        <TextField fx:id="peer_port" layoutX="53.0" layoutY="205.0" prefHeight="25.0" prefWidth="73.0"
+                   promptText="peer port" style="-fx-background-radius: 30;" stylesheets="@./assets/testField.css"/>
+        <Label fx:id="logginginfo" layoutX="16.0" prefHeight="32.0" prefWidth="170.0" stylesheets="@./assets/label.css"
+               text="connect to the server" textFill="WHITE" AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="9.0"
+               AnchorPane.topAnchor="0.0">
+            <font>
+                <Font name="System Bold Italic" size="13.0"/>
+            </font>
+        </Label>
+        <TextField fx:id="server_name" layoutX="54.0" layoutY="40.0" prefHeight="25.0" prefWidth="125.0"
+                   promptText="server name" style="-fx-background-radius: 30;" stylesheets="@./assets/testField.css"/>
+        <TextField fx:id="server_port" layoutX="54.0" layoutY="78.0" prefHeight="25.0" prefWidth="73.0"
+                   promptText="server port" style="-fx-background-radius: 30;" stylesheets="@./assets/testField.css"/>
+        <Label fx:id="name_server_label" layoutX="11.0" layoutY="43.0" style="-fx-font-size: 10pt;"
+               stylesheets="@./assets/label.css" text="Name:" textFill="WHITE" underline="true">
+            <font>
+                <Font name="Arial" size="12.0"/>
+            </font>
+        </Label>
+        <ButtonBar fx:id="server_button_bar" layoutX="54.0" layoutY="121.0" maxHeight="-Infinity" maxWidth="-Infinity"
+                   minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="73.0"
+                   AnchorPane.bottomAnchor="452.0" AnchorPane.leftAnchor="54.0" AnchorPane.rightAnchor="70.0"
+                   AnchorPane.topAnchor="121.0"/>
+        <Label fx:id="port_server_label" layoutX="18.0" layoutY="80.0" style="-fx-font-size: 10pt;"
+               stylesheets="@./assets/label.css" text="Port:" textFill="WHITE" underline="true">
+            <font>
+                <Font name="Arial" size="12.0"/>
+            </font>
+        </Label>
+        <Label fx:id="peer_host_label" layoutX="17.0" layoutY="169.0" style="-fx-font-size: 10pt;"
+               stylesheets="@./assets/label.css" text="Host:" textFill="WHITE" underline="true">
+            <font>
+                <Font name="Arial" size="12.0"/>
+            </font>
+        </Label>
+        <Separator layoutX="13.0" layoutY="29.0" prefHeight="9.0" prefWidth="170.0" AnchorPane.bottomAnchor="560.0"
+                   AnchorPane.leftAnchor="13.0" AnchorPane.rightAnchor="12.0" AnchorPane.topAnchor="29.0"/>
+        <Separator layoutX="8.0" layoutY="284.0" prefHeight="3.0" prefWidth="180.0" AnchorPane.leftAnchor="8.0"
+                   AnchorPane.rightAnchor="7.0"/>
+        <Separator layoutX="12.0" layoutY="150.0" prefHeight="9.0" prefWidth="170.0"/>
+        <Label fx:id="participantsLabel" layoutX="8.0" layoutY="291.0" stylesheets="@./assets/label.css"
+               text="participants" textFill="WHITE" visible="false">
+            <font>
+                <Font name="System Bold Italic" size="13.0"/>
+            </font>
+        </Label>
+    </AnchorPane>
+    <AnchorPane fx:id="rechts" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+                prefHeight="598.0" prefWidth="358.0" stylesheets="@./assets/r_anchor.css">
+        <TabPane fx:id="chatTabPane" prefHeight="552.0" prefWidth="349.0" style="-fx-background-color: gainsboro;"
+                 tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="0.0"
+                 AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <Tab text="default">
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                    <ScrollPane fx:id="messageScroller" hbarPolicy="NEVER" maxHeight="-Infinity"
+                                maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" pannable="true"
+                                prefHeight="539.0" prefWidth="358.0" stylesheets="@./assets/scrollPane.css"
+                                vvalue="1.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                                AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                        <VBox fx:id="chatVBox" prefHeight="539.0" prefWidth="358.0" spacing="5.0"/>
+                    </ScrollPane>
+                </AnchorPane>
+            </Tab>
+        </TabPane>
+        <TextField fx:id="send" layoutX="5.0" layoutY="570.0" prefHeight="25.0" prefWidth="245.0"
+                   promptText="send a message">
+            <font>
+                <Font name="System Bold" size="12.0"/>
+            </font>
+            <effect>
+                <ColorAdjust/>
+            </effect>
+        </TextField>
+        <ComboBox fx:id="box" layoutX="256.0" layoutY="569.0" prefHeight="25.0" prefWidth="92.0"
+                  promptText="&lt;------&gt;" stylesheets="@./assets/combo.css"/>
+    </AnchorPane>
+    <padding>
+        <Insets top="1.0"/>
+    </padding>
+</SplitPane>

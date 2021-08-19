@@ -1,0 +1,10 @@
+
+
+.combo-box .text-field:focused {
+    -fx-prompt-text-fill: transparent;
+}
+
+.combo-box {
+    -fx-background-radius: 10;
+    -fx-background-color: #ffffff;
+}
